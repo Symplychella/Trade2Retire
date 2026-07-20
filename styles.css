@@ -39,6 +39,11 @@ body {
     gap: 8px; /* slightly tighter spacing */
 }
 
+.node-93 {
+   width: 60%;
+    height: auto;
+}
+
 .text-56 {
     font-size: 1.125rem; /* slightly smaller title */
     font-weight: bold;
@@ -94,7 +99,7 @@ body {
 .rectangle-4-4 {
     flex: 1;
     /* change the URL below to your image (relative or absolute). Example: url("../images/hero-bg.jpg") */
-    background-image: linear-gradient(100deg, #2d2d2d, #2d2d2d, #214ecbd3, #2962FF, #2962FF), url("C:\Users\Chella\OneDrive\Documents\Something\images\group-20-1-52.png");
+    background-image: linear-gradient(100deg, #2d2d2d, #2d2d2d, #214ecbd3, #2962FF, #2962FF), url("C:\Users\USER\Documents\Trade2Retire\group-20-1-52.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -172,29 +177,31 @@ body {
     max-width: 500px;
 }
 
-.logo-45 {
-    width: 60px;
-    height: 60px;
-    background-color: #00000000;
-    border-radius: 50%;
+.group-1-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers everything horizontally */
+    justify-content: center;
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-.group-1-6 {
-    margin-bottom: 1rem;
+.node-45{
+    width: 35px;           
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.text-7 {
+.text-7{
     font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: -1rem;
+    margin: 0;
 }
 
-.text-8 {
+.text-8{
     color: #b0b0b0;
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    margin-top: 5px;
 }
 
 /* Form Styles */
@@ -301,6 +308,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.node-68 {
+   width: 10%;
+    height: auto;
+    margin-bottom: 5px;
 }
 
 .container-69 {
