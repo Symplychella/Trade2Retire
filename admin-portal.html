@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade2Retire - Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-portal.css">
+</head>
+<body>
+<div class="admin-portal">
+    <!-- Navigation -->
+    <div class="nav-53">
+        <div class="nav-54">
+            <div class="logo-55">
+                <p class="text-56"></p>
+                <img src="C:\Users\USER\Documents\Trade2Retire\node-93.png" class="node-93" alt="Trade2Retire Logo" />
+                <div class="node-93"></div>
+            </div>
+            <div class="button-58">
+                <a href="#" class="link-59">
+                    <p class="text-61">Home</p>
+                </a>
+                <a href="#" class="link-64">
+                    <p class="text-66">Login</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-2">
+        <div class="background-3">
+            <!-- Left Side - Image Section -->
+            <div class="rectangle-4-4">
+                <div class="image-content">
+                    <h2 class="image-title">Welcome back!</h2>
+                    <p class="image-subtitle">Dive back in for today's market insights</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>User & Student Management</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Course Creation and Updates</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Analytics & Performance Reports</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Resource & File Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Form Section -->
+            <div class="login-section-5">
+                <div class="group-1-6">
+                    <img src="C:\Users\USER\Documents\Trade2Retire\node-59.png" class="node-45" alt="Trade2Retire Logo" />
+                    <h1 class="text-7">Admin Portal</h1>
+                    <p class="text-8">Login to access the admin dashboard</p>
+                </div>
+                
+                
+                <form class="form-9">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="text-15">Admin Email</label>
+                        <input type="email" class="input-16" placeholder="Enter your admin email">
+                    </div>
+                    
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="text-20">Password</label>
+                        <input type="password" class="input-22" placeholder="Enter your password">
+                       <a href="#" class="link-21">
+                            <p class="text-21">Forgot password?</p>
+                        </a>
+                    </div>
+                   
+                    <!-- Login Button -->
+                    <button type="submit" class="button-39">
+                        <span class="text-40">Login</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-67">
+        <div class="container-68">
+            <img src="C:\Users\USER\Documents\Trade2Retire\node-93.png" class="node-68 footer-logo" alt="Trade2Retire Logo" />
+            <div class="container-69">
+                <!-- Learn Section -->
+                <div>
+                    <p class="text-70">Learn</p>
+                    <div class="link-71">
+                        <a href="#"><span class="text-72">Courses</span></a>
+                    </div>
+                    <div class="link-73">
+                        <a href="#"><span class="text-74">Tutorials</span></a>
+                    </div>
+                    <div class="link-75">
+                        <a href="#"><span class="text-76">Resources</span></a>
+                    </div>
+                </div>
+                
+                <!-- Company Section -->
+                <div>
+                    <p class="text-77">Company</p>
+                    <div class="link-78">
+                        <a href="#"><span class="text-79">About</span></a>
+                    </div>
+                    <div class="link-80">
+                        <a href="#"><span class="text-81">Disclaimer</span></a>
+                    </div>
+                    <div class="link-82">
+                        <a href="#"><span class="text-83">Contact</span></a>
+                    </div>
+                </div>
+                
+                <!-- Support Section -->
+                <div>
+                    <p class="text-84">Support</p>
+                    <div class="link-85">
+                        <a href="#"><span class="text-86">Help Center</span></a>
+                    </div>
+                    <div class="link-87">
+                        <a href="#"><span class="text-88">FAQ</span></a>
+                    </div>
+                    <div class="link-89">
+                        <a href="#"><span class="text-90">Community</span></a>
+                    </div>
+                </div>
+                
+                <div class="node-93"></div>
+            </div>
+            
+            <div class="horizontalborder-92">
+                <p class="text-93">© 2026 Trade2Retire. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="link-94">
+                        <span class="text-95">Twitter</span>
+                    </a>
+                    <a href="#" class="link-96">
+                        <span class="text-97">Facebook</span>
+                    </a>
+                    <a href="#" class="link-98">
+                        <span class="text-99">LinkedIn</span>
+                    </a>
+                    <a href="#" class="link-100">
+                        <span class="text-101">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple form validation
+    document.querySelector('.form-9').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const password = document.querySelector('.input-22').value;
+        const confirmPassword = document.querySelector('.input-27').value;
+        const termsChecked = document.querySelector('.input-31').checked;
+        
+        if (password.length < 8) {
+            alert('Password must be at least 8 characters long');
+            return;
+        }
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+        
+        alert('Registration successful!');
+        // In a real application, you would submit the form to a server here
+    });
+</script>
+</body>
+</html>
