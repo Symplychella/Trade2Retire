@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade2Retire - Student Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+ 
+  <!-- ================= NAVIGATION (same structure as your site) ================= -->
+  <div class="nav-53">
+    <div class="nav-54">
+      <div class="logo-55">
+        <img src="node-93.png" class="node-93" alt="Trade2Retire Logo" />
+      </div>
+ 
+      <div class="button-58">
+        <a href="index.html" class="link-59">
+          <p class="text-59">Home</p>
+        </a>
+        <a href="services.html" class="link-62">
+          <p class="text-62">Services</p>
+        </a>
+        <a href="dashboard.html" class="link-64">
+          <p class="text-64">Dashboard</p>
+        </a>
+      </div>
+ 
+      <div class="nav-right">
+ 
+        <!-- Notification bell with dropdown -->
+        <div class="dropdown-wrap" id="notifWrap">
+          <button class="icon-btn" id="notifBtn" aria-label="Notifications">
+            &#128276;<span class="dot"></span>
+          </button>
+          <div class="dropdown-panel notif-panel" id="notifPanel">
+            <div class="dropdown-head">Notifications</div>
+            <div class="notif-item">
+              <span class="notif-dot gold"></span>
+              <div>
+                <p>Your certificate for <strong>Indicator Systems</strong> is ready.</p>
+                <span class="notif-time">2 hours ago</span>
+              </div>
+            </div>
+            <div class="notif-item">
+              <span class="notif-dot blue"></span>
+              <div>
+                <p>New live session added: <strong>Gold Masterclass Q&amp;A</strong></p>
+                <span class="notif-time">Yesterday</span>
+              </div>
+            </div>
+            <div class="notif-item">
+              <span class="notif-dot gold"></span>
+              <div>
+                <p>You're on a 14-day streak. Keep it up!</p>
+                <span class="notif-time">Today</span>
+              </div>
+            </div>
+            <a href="#" class="dropdown-footer-link">View all notifications</a>
+          </div>
+        </div>
+ 
+        <!-- Profile with dropdown -->
+        <div class="dropdown-wrap" id="profileWrap">
+          <button class="profile-chip" id="profileBtn" aria-label="Account menu">
+            <div class="avatar">CO</div>
+            <span>Chella</span>
+          </button>
+          <div class="dropdown-panel profile-panel" id="profilePanel">
+            <a href="#" class="profile-menu-item"><span class="ico">&#128100;</span> Profile</a>
+            <a href="#" class="profile-menu-item"><span class="ico">&#9881;</span> Settings</a>
+            <a href="#" class="profile-menu-item"><span class="ico">&#10067;</span> Help</a>
+            <div class="side-divider"></div>
+            <a href="#" class="profile-menu-item logout"><span class="ico">&#8594;</span> Logout</a>
+          </div>
+        </div>
+ 
+        <button class="burger" id="burgerBtn">&#9776;</button>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="overlay" id="overlay"></div>
+ 
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+ 
+    <div class="hero-inner">
+      <h1 class="hero-title">Welcome back, <span class="gold-shimmer">Chella</span> <span class="wave">&#128075;</span></h1>
+      <p class="hero-sub" id="heroTyped"></p>
+ 
+      <div class="hero-cta-row">
+        <a href="#continue-learning" class="link-64 hero-cta-pulse">Resume Learning</a>
+        <a href="#" class="link-59">View Certificates</a>
+      </div>
+ 
+      <div class="hero-badges">
+        <div class="hero-badge streak-badge">
+          <div class="num" id="streakNum">0</div>
+          <div class="lbl">Day Streak</div>
+        </div>
+        <div class="hero-badge">
+          <div class="num" id="progressNum">0</div>
+          <div class="lbl">% Through Masterclass</div>
+        </div>
+        <div class="hero-badge">
+          <div class="num" id="rankNum">0</div>
+          <div class="lbl">Community Rank</div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="scroll-cue">
+      <span></span>
+    </div>
+  </section>
+ 
+  <!-- ================= LIVE MARKET TICKER ================= -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span class="tick up">EUR/USD <b>+0.24%</b></span>
+      <span class="tick down">GBP/JPY <b>-0.12%</b></span>
+      <span class="tick up">XAU/USD (Gold) <b>+1.18%</b></span>
+      <span class="tick down">BTC/USD <b>-0.83%</b></span>
+      <span class="tick up">US30 <b>+0.41%</b></span>
+      <span class="tick up">NAS100 <b>+0.67%</b></span>
+      <span class="tick down">USD/CHF <b>-0.09%</b></span>
+      <span class="tick up">ETH/USD <b>+2.02%</b></span>
+      <!-- duplicate set for seamless loop -->
+      <span class="tick up">EUR/USD <b>+0.24%</b></span>
+      <span class="tick down">GBP/JPY <b>-0.12%</b></span>
+      <span class="tick up">XAU/USD (Gold) <b>+1.18%</b></span>
+      <span class="tick down">BTC/USD <b>-0.83%</b></span>
+      <span class="tick up">US30 <b>+0.41%</b></span>
+      <span class="tick up">NAS100 <b>+0.67%</b></span>
+      <span class="tick down">USD/CHF <b>-0.09%</b></span>
+      <span class="tick up">ETH/USD <b>+2.02%</b></span>
+    </div>
+  </div>
+ 
+  <!-- ================= DASHBOARD BODY ================= -->
+  <div class="dash-shell">
+ 
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="#" class="side-link active"><span class="ico">&#9635;</span> Overview</a>
+      <a href="#" class="side-link"><span class="ico">&#128218;</span> My Courses</a>
+      <a href="#" class="side-link"><span class="ico">&#127942;</span> Certificates</a>
+      <a href="#" class="side-link"><span class="ico">&#128202;</span> Progress</a>
+      <a href="#" class="side-link"><span class="ico">&#128172;</span> Community</a>
+ 
+      <div class="upgrade-card">
+        <strong>Go VIP</strong>
+        <p>Unlock 1-on-1 mentorship &amp; live trading rooms.</p>
+        <a href="#" class="link-64" style="display:inline-block;">Upgrade</a>
+      </div>
+    </aside>
+ 
+    <!-- Main -->
+    <main>
+      <!-- Stats: circular rings -->
+      <div class="stat-grid reveal-group">
+ 
+        <div class="stat-card reveal">
+          <div class="ring-wrap">
+            <svg viewBox="0 0 120 120" class="ring-svg">
+              <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+              <circle class="ring-fill gold-ring" cx="60" cy="60" r="50" data-pct="63"></circle>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-num">5</div>
+            </div>
+          </div>
+          <div class="stat-label">Courses Enrolled</div>
+        </div>
+ 
+        <div class="stat-card reveal">
+          <div class="ring-wrap">
+            <svg viewBox="0 0 120 120" class="ring-svg">
+              <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+              <circle class="ring-fill blue-ring" cx="60" cy="60" r="50" data-pct="40"></circle>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-num">2</div>
+            </div>
+          </div>
+          <div class="stat-label">Courses Completed</div>
+        </div>
+ 
+        <div class="stat-card reveal">
+          <div class="ring-wrap">
+            <svg viewBox="0 0 120 120" class="ring-svg">
+              <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+              <circle class="ring-fill gold-ring" cx="60" cy="60" r="50" data-pct="40"></circle>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-num">2</div>
+            </div>
+          </div>
+          <div class="stat-label">Certificates Earned</div>
+        </div>
+ 
+        <div class="stat-card reveal">
+          <div class="ring-wrap">
+            <svg viewBox="0 0 120 120" class="ring-svg">
+              <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+              <circle class="ring-fill blue-ring" cx="60" cy="60" r="50" data-pct="84"></circle>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-num">42h</div>
+            </div>
+          </div>
+          <div class="stat-label">Hours Studied</div>
+        </div>
+ 
+      </div>
+ 
+      <!-- Continue learning -->
+      <div class="section-head" id="continue-learning">
+        <h2>Continue Learning</h2>
+        <a href="#">View all courses &rarr;</a>
+      </div>
+ 
+      <div class="course-row reveal">
+       <div class="course-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0005.jpg" alt="AI Trading Masterclass"></div>
+        <div class="course-info">
+          <h3>AI Trading Masterclass</h3>
+          <div class="meta">Module 5 of 8 &middot; Risk Management Systems</div>
+          <div class="progress-track"><div class="progress-fill" data-target="68"></div></div>
+          <span class="progress-pct">68% complete</span>
+        </div>
+        <a href="#" class="link-64">Resume</a>
+      </div>
+ 
+      <div class="course-row reveal">
+        <div class="course-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0004.jpg" alt="Technical Analysis Fundamentals"></div>
+        <div class="course-info">
+          <h3>Technical Analysis Fundamentals</h3>
+          <div class="meta">Module 2 of 6 &middot; Chart Patterns</div>
+          <div class="progress-track"><div class="progress-fill" data-target="34"></div></div>
+          <span class="progress-pct">34% complete</span>
+        </div>
+        <a href="#" class="link-64">Resume</a>
+      </div>
+ 
+      <div class="course-row reveal">
+        <div class="course-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0014.jpg" alt="Psychology of Trading"></div>
+        <div class="course-info">
+          <h3>Psychology of Trading</h3>
+          <div class="meta">Module 1 of 4 &middot; Managing Emotional Risk</div>
+          <div class="progress-track"><div class="progress-fill" data-target="12"></div></div>
+          <span class="progress-pct">12% complete</span>
+        </div>
+        <a href="#" class="link-64">Resume</a>
+      </div>
+ 
+      <!-- Split: enrolled courses + activity -->
+      <div class="split-grid">
+        <div class="card-block">
+          <div class="section-head" style="margin-top:0;">
+            <h2>All Enrolled Courses</h2>
+          </div>
+ 
+          <div class="mini-course reveal">
+            <div class="mini-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0005.jpg" alt="AI Trading Masterclass"></div>
+            <div>
+              <h4>AI Trading Masterclass</h4>
+              <div class="mini-meta">12 lessons &middot; Last opened 2 hours ago</div>
+            </div>
+            <span class="badge progress">In Progress</span>
+          </div>
+          <div class="mini-course reveal">
+            <div class="mini-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0004.jpg" alt="Technical Analysis Fundamentals"></div>
+            <div>
+              <h4>Technical Analysis Fundamentals</h4>
+              <div class="mini-meta">9 lessons &middot; Last opened yesterday</div>
+            </div>
+            <span class="badge progress">In Progress</span>
+          </div>
+          <div class="mini-course reveal">
+            <div class="mini-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0014.jpg" alt="Psychology of Trading"></div>
+            <div>
+              <h4>Psychology of Trading</h4>
+              <div class="mini-meta">6 lessons &middot; Last opened 3 days ago</div>
+            </div>
+            <span class="badge progress">In Progress</span>
+          </div>
+          <div class="mini-course reveal">
+            <div class="mini-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0009.jpg" alt="Trading for Beginners"></div>
+            <div>
+              <h4>Trading for Beginners</h4>
+              <div class="mini-meta">10 lessons &middot; Completed May 14</div>
+            </div>
+            <span class="badge completed">Completed</span>
+          </div>
+          <div class="mini-course reveal">
+            <div class="mini-thumb"><img src="C:\Users\USER\Documents\Trade2Retire\IMG-20250804-WA0003.jpg" alt="Indicator Systems"></div>
+            <div>
+              <h4>Indicator Systems</h4>
+              <div class="mini-meta">8 lessons &middot; Completed Apr 2</div>
+            </div>
+            <span class="badge completed">Completed</span>
+          </div>
+        </div>
+ 
+        <div class="card-block">
+          <div class="section-head" style="margin-top:0;">
+            <h2>Recent Activity</h2>
+          </div>
+          <div class="activity-item reveal">
+            <div class="activity-dot"></div>
+            <div>
+              <p>You completed <strong>Lesson 5: Position Sizing</strong></p>
+              <div class="time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="activity-item reveal">
+            <div class="activity-dot"></div>
+            <div>
+              <p>Earned certificate for <strong>Indicator Systems</strong></p>
+              <div class="time">Apr 2</div>
+            </div>
+          </div>
+          <div class="activity-item reveal">
+            <div class="activity-dot"></div>
+            <div>
+              <p>Joined live session: <strong>Gold Masterclass Q&amp;A</strong></p>
+              <div class="time">Mar 28</div>
+            </div>
+          </div>
+          <div class="activity-item reveal">
+            <div class="activity-dot"></div>
+            <div>
+              <p>Started course <strong>Psychology of Trading</strong></p>
+              <div class="time">Mar 20</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Recommended boxes -->
+      <div class="section-head">
+        <h2>Recommended For You</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-box reveal">
+          <h4>VIP 1-on-1 Mentorship</h4>
+          <p>Get paired with a senior trader for weekly live reviews of your trade journal and strategy.</p>
+          <a href="#">Explore mentorship &rarr;</a>
+        </div>
+        <div class="story-box reveal">
+          <h4>Gold Masterclass</h4>
+          <p>You've completed the fundamentals &mdash; this advanced track builds on your current progress.</p>
+          <a href="#">Explore masterclass &rarr;</a>
+        </div>
+      </div>
+ 
+    </main>
+  </div>
+ 
+ <!-- Footer -->
+     <div class="footer-67">
+        <div class="container-68">
+            <img src="C:\Users\USER\Documents\Trade2Retire\node-93.png" class="node-68 footer-logo" alt="Trade2Retire Logo" />
+            <div class="container-69">
+                <!-- Learn Section -->
+                <div>
+                    <p class="text-70">Learn</p>
+                    <div class="link-71">
+                        <a href="course.html"><span class="text-72">Courses</span></a>
+                    </div>
+                    <div class="link-73">
+                        <a href="#"><span class="text-74">Tutorials</span></a>
+                    </div>
+                    <div class="link-75">
+                        <a href="#"><span class="text-76">Resources</span></a>
+                    </div>
+                </div>
+                
+                <!-- Company Section -->
+                <div>
+                    <p class="text-77">Company</p>
+                    <div class="link-78">
+                        <a href="#"><span class="text-79">About</span></a>
+                    </div>
+                    <div class="link-80">
+                        <a href="#"><span class="text-81">Disclaimer</span></a>
+                    </div>
+                    <div class="link-82">
+                        <a href="#"><span class="text-83">Contact</span></a>
+                    </div>
+                </div>
+
+                 <!-- Support Section -->
+                <div>
+                    <p class="text-84">Support</p>
+                    <div class="link-85">
+                        <a href="#"><span class="text-86">Help Center</span></a>
+                    </div>
+                    <div class="link-87">
+                        <a href="#"><span class="text-88">FAQ</span></a>
+                    </div>
+                    <div class="link-89">
+                        <a href="#"><span class="text-90">Community</span></a>
+                    </div>
+                </div>
+                
+                <div class="node-93"></div>
+            </div>
+            
+            <div class="horizontalborder-92">
+                <p class="text-93">© 2026 Trade2Retire. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="link-94">
+                        <span class="text-95">Twitter</span>
+                    </a>
+                    <a href="#" class="link-96">
+                        <span class="text-97">Facebook</span>
+                    </a>
+                    <a href="#" class="link-98">
+                        <span class="text-99">LinkedIn</span>
+                    </a>
+                    <a href="#" class="link-100">
+                        <span class="text-101">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+<script src="dashboard.js"></script>
+</body>
+</html>
+ 

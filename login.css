@@ -20,7 +20,7 @@ body {
 /* Navigation */
 .nav-53 {
     background-image: linear-gradient(270deg, #2d2d2d, #2d2d2d, #2d2d2d, #2b337864, #02123ed0,  #1a1919, #1a1919);
-    padding: 0.5rem 1rem; /* reduced vertical and horizontal padding to make nav slimmer */
+    padding: 1.5rem 1.5rem; /* reduced vertical and horizontal padding to make nav slimmer */
     border-bottom: 0px solid #2f2f2f;
 }
 
@@ -37,6 +37,11 @@ body {
     display: flex;
     align-items: center;
     gap: 8px; /* slightly tighter spacing */
+}
+
+.node-93 {
+   width: 60%;
+    height: auto;
 }
 
 .text-56 {
@@ -172,29 +177,31 @@ body {
     max-width: 500px;
 }
 
-.logo-45 {
-    width: 60px;
-    height: 60px;
-    background-color: #00000000;
-    border-radius: 50%;
+.group-1-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers everything horizontally */
+    justify-content: center;
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-.group-1-6 {
-    margin-bottom: 1rem;
+.node-45{
+    width: 35px;           
+    height: auto;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.text-7 {
+.text-7{
     font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: -1rem;
+    margin: 0;
 }
 
-.text-8 {
+.text-8{
     color: #b0b0b0;
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    margin-top: 5px;
 }
 
 /* Form Styles */
@@ -217,7 +224,11 @@ body {
 
 .text-21 {
     font-size: 0.8rem;
-    color: #b0b0b0;
+}
+
+.link-21 {
+    color: #4a90e2;
+    text-decoration: none;
 }
 
 .input-11, .input-16, .input-22, .input-27 {
@@ -236,25 +247,6 @@ body {
 .input-11:focus, .input-16:focus, .input-22:focus, .input-27:focus {
     outline: none;
     border-color: #4a90e2;
-}
-
-/* Terms and Conditions */
-.label-32 {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin: 1rem 0;
-    color: #b0b0b0;
-    font-size: 0.9rem;
-}
-
-.input-31 {
-    margin-top: 0.2rem;
-}
-
-.link-34, .link-37 {
-    color: #4a90e2;
-    text-decoration: none;
 }
 
 /* Login Button */
@@ -293,14 +285,26 @@ body {
 /* Footer */
 .footer-67 {
     background-color: #2d2d2d;
-    border-top: 0px solid #404040;
+    border-top: 1px solid #404040;
     padding: 2rem 0 1rem;
+    margin-top: 0rem;
 }
 
 .container-68 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.node-68 {
+   width: 10%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 2rem;
 }
 
 .container-69 {

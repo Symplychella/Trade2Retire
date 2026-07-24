@@ -24,7 +24,7 @@
         /* Navigation */
 .nav-53 {
     background-image: linear-gradient(270deg, #2d2d2d, #2d2d2d, #2d2d2d, #2b337864, #02123ed0,  #1a1919, #1a1919);
-    padding: 0.5rem 1rem; /* reduced vertical and horizontal padding to make nav slimmer */
+    padding: 1.5rem 1.5rem; /* reduced vertical and horizontal padding to make nav slimmer */
     border-bottom: 0px solid #2f2f2f;
 }
 
@@ -41,6 +41,11 @@
     display: flex;
     align-items: center;
     gap: 8px; /* slightly tighter spacing */
+}
+
+.node-93 {
+   width: 60%;
+    height: auto;
 }
 
 .text-56 {
@@ -423,6 +428,12 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.node-68 {
+   width: 10%;
+    height: auto;
+    margin-bottom: 5px;
 }
 
 .footer-logo {

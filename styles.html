@@ -18,10 +18,10 @@
                 <div class="node-93"></div>
             </div>
             <div class="button-58">
-                <a href="#" class="link-59">
+                <a href="index.html" class="link-59">
                     <p class="text-61">Home</p>
                 </a>
-                <a href="#" class="link-64">
+                <a href="login.html" class="link-64">
                     <p class="text-66">Login</p>
                 </a>
             </div>
@@ -113,7 +113,7 @@
                     <!-- Login Link -->
                     <div class="horizontalborder-41">
                         <span class="text-42">Already have an account? </span>
-                        <a href="#" class="link-43">
+                        <a href="login.html" class="link-43">
                             <span class="text-44">Login</span>
                         </a>
                     </div>
@@ -131,7 +131,7 @@
                 <div>
                     <p class="text-70">Learn</p>
                     <div class="link-71">
-                        <a href="#"><span class="text-72">Courses</span></a>
+                        <a href="course.html"><span class="text-72">Courses</span></a>
                     </div>
                     <div class="link-73">
                         <a href="#"><span class="text-74">Tutorials</span></a>
@@ -217,8 +217,13 @@
             return;
         }
         
-        alert('Registration successful!');
-        // In a real application, you would submit the form to a server here
+        document.querySelector(".form-9").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Validate login...
+
+    window.location.href = "index.html";
+});
     });
 </script>
 </body>

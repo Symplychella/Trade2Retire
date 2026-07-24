@@ -14,14 +14,14 @@
         <div class="nav-54">
             <div class="logo-55">
                 <p class="text-56"></p>
-                <img src="images/logo-45.png" class="node-93" alt="Trade2Retire Logo" />
+                <img src="C:\Users\USER\Documents\Trade2Retire\node-93.png" class="node-93" alt="Trade2Retire Logo" />
                 <div class="node-93"></div>
             </div>
             <div class="button-58">
-                <a href="#" class="link-59">
+                <a href="index.html" class="link-59">
                     <p class="text-61">Home</p>
                 </a>
-                <a href="#" class="link-64">
+                <a href="styles.html" class="link-64">
                     <p class="text-66">Register</p>
                 </a>
             </div>
@@ -34,7 +34,6 @@
             <!-- Left Side - Image Section -->
             <div class="rectangle-4-4">
                 <div class="image-content">
-                     <img src="images/node-93.png" class="node-57" alt="Trade2Retire Logo" />
                     <h2 class="image-title">Welcome back!</h2>
                     <p class="image-subtitle">Dive back in for today's market insights</p>
                     <div class="features-list">
@@ -61,9 +60,11 @@
             <!-- Right Side - Form Section -->
             <div class="login-section-5">
                 <div class="group-1-6">
+                    <img src="C:\Users\USER\Documents\Trade2Retire\node-59.png" class="node-45" alt="Trade2Retire Logo" />
                     <h1 class="text-7">Student Login</h1>
+                    <p class="text-8">Access your course and trading material</p>
                 </div>
-                <p class="text-8">Access your course and trading material</p>
+                
                 
                 <form class="form-9">
                     <!-- Email -->
@@ -76,7 +77,9 @@
                     <div class="form-group">
                         <label class="text-20">Password</label>
                         <input type="password" class="input-22" placeholder="Create a password">
-                        <p class="text-21">Forgot password?</p>
+                        <a href="#" class="link-21">
+                            <p class="text-21">Forgot password?</p>
+                        </a>
                     </div>
                    
                     <!-- Login Button -->
@@ -87,7 +90,7 @@
                     <!-- Register Link -->
                     <div class="horizontalborder-41">
                         <span class="text-42">Don't have an account? </span>
-                        <a href="#" class="link-43">
+                        <a href="styles.html" class="link-43">
                             <span class="text-44">Register</span>
                         </a>
                     </div>
@@ -99,13 +102,13 @@
     <!-- Footer -->
     <div class="footer-67">
         <div class="container-68">
-            <img src="images/node-93.png" class="node-57 footer-logo" alt="Trade2Retire Logo" />
+            <img src="C:\Users\USER\Documents\Trade2Retire\node-93.png" class="node-68 footer-logo" alt="Trade2Retire Logo" />
             <div class="container-69">
                 <!-- Learn Section -->
                 <div>
                     <p class="text-70">Learn</p>
                     <div class="link-71">
-                        <a href="#"><span class="text-72">Courses</span></a>
+                        <a href="course.html"><span class="text-72">Courses</span></a>
                     </div>
                     <div class="link-73">
                         <a href="#"><span class="text-74">Tutorials</span></a>
@@ -147,7 +150,7 @@
             </div>
             
             <div class="horizontalborder-92">
-                <p class="text-93">© 2025 Trade2Retire. All rights reserved.</p>
+                <p class="text-93">© 2026 Trade2Retire. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#" class="link-94">
                         <span class="text-95">Twitter</span>
@@ -186,13 +189,13 @@
             return;
         }
         
-        if (!termsChecked) {
-            alert('Please agree to the Terms of Service and Privacy Policy');
-            return;
-        }
-        
-        alert('Registration successful!');
-        // In a real application, you would submit the form to a server here
+       document.querySelector(".form-9").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Validate login...
+
+    window.location.href = "index.html";
+});
     });
 </script>
 </body>
